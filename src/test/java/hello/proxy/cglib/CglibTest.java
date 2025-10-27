@@ -17,7 +17,7 @@ public class CglibTest {
         enhancer.setSuperclass(ConcreteService.class);
         enhancer.setCallback(new TimeMethodInterceptor(target));
         ConcreteService proxy = (ConcreteService) enhancer.create();
-        log.info("taregetClass={}", target.getClass());
+        log.info("targetClass={}", target.getClass());
         log.info("proxyClass={}", proxy.getClass());
 
         proxy.call();
